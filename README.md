@@ -1,67 +1,90 @@
-# megasena-ml-lab
-Mega-Sena usando Machine Learning, engenharia massiva de features, análise estatísticae modelos ensemble multioutput.
+# 🎰 Megasena ML Lab
 
-Modelo Mega-Sena Ultra-Aprimorado - Machine Learning v2.0
-Sistema avançado de previsão para Mega-Sena utilizando Machine Learning, análise estatística e reconhecimento de padrões complexos.
-🎯 Características Principais
+Mega-Sena usando Machine Learning, engenharia massiva de features, análise estatística e modelos ensemble multioutput.
 
-Universo completo: Análise de todas as 60 dezenas
-Previsão Top 10: Identifica os 10 números mais prováveis para o próximo sorteio
-Machine Learning: Ensemble de 3 algoritmos (Random Forest, Gradient Boosting, Logistic Regression)
-Features expandidas: 40+ características por número incluindo ciclos, momentum, comportamento e correlações
+## 📋 Índice
 
-📊 Análises Implementadas
-Estatísticas Avançadas
+- [Características Principais](#-características-principais)
+- [Análises Implementadas](#-análises-implementadas)
+- [Como Usar](#-como-usar)
+- [Output do Modelo](#-output-do-modelo)
+- [Arquitetura do Modelo](#-arquitetura-do-modelo)
+- [Visualizações](#-visualizações)
+- [Configurações](#️-configurações-ajustáveis)
+- [Interpretação dos Resultados](#-interpretação-dos-resultados)
+- [Notas Importantes](#-notas-importantes)
+- [Disclaimer](#️-disclaimer)
 
-Frequências absolutas e relativas
-Análise de ciclos e atrasos
-Momentum e tendências
-Padrões comportamentais
-Volatilidade e consistência
+---
 
-Padrões Numéricos
+## 🎯 Características Principais
 
-Trincas correlacionais: Identifica combinações de 3 números frequentes
-Pares correlacionais: Analisa duplas que aparecem juntas
-Princípio de Pareto (80/20): Classifica números por performance
-Distribuição espacial: Quadrantes, zonas, linhas e colunas do volante
-Sequências e saltos: Padrões de números consecutivos
+- **Universo completo**: Análise de todas as 60 dezenas
+- **Previsão Top 10**: Identifica os 10 números mais prováveis para o próximo sorteio
+- **Machine Learning**: Ensemble de 3 algoritmos (Random Forest, Gradient Boosting, Logistic Regression)
+- **Features expandidas**: 40+ características por número incluindo ciclos, momentum, comportamento e correlações
 
-Características Matemáticas
+---
 
-Números primos e Fibonacci
-Múltiplos (2, 3, 4, 5, 6, 7, 8, 9, 10)
-Pares e ímpares
-Somas e distribuições estatísticas
-Assimetria e curtose
+## 📊 Análises Implementadas
 
-🚀 Como Usar
-Requisitos
-pythonpandas
+### Estatísticas Avançadas
+- Frequências absolutas e relativas
+- Análise de ciclos e atrasos
+- Momentum e tendências
+- Padrões comportamentais
+- Volatilidade e consistência
+
+### Padrões Numéricos
+- **Trincas correlacionais**: Identifica combinações de 3 números frequentes
+- **Pares correlacionais**: Analisa duplas que aparecem juntas
+- **Princípio de Pareto (80/20)**: Classifica números por performance
+- **Distribuição espacial**: Quadrantes, zonas, linhas e colunas do volante
+- **Sequências e saltos**: Padrões de números consecutivos
+
+### Características Matemáticas
+- Números primos e Fibonacci
+- Múltiplos (2, 3, 4, 5, 6, 7, 8, 9, 10)
+- Pares e ímpares
+- Somas e distribuições estatísticas
+- Assimetria e curtose
+
+---
+
+## 🚀 Como Usar
+
+### Requisitos
+```bash
+pandas
 numpy
 matplotlib
 seaborn
 scikit-learn
 scipy
-Instalação
-bashpip install pandas numpy matplotlib seaborn scikit-learn scipy
-Execução no Google Colab
+```
 
-Abra o arquivo no Google Colab
-Execute a primeira célula para fazer upload do arquivo CSV
-O arquivo deve estar no formato:
+### Instalação
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn scipy
+```
 
-Separador: ; (ponto e vírgula)
-Colunas das bolas sorteadas (6 colunas com números de 1 a 60)
+### Execução no Google Colab
 
+1. Abra o arquivo no Google Colab
+2. Execute a primeira célula para fazer upload do arquivo CSV
+3. O arquivo deve estar no formato:
+   - Separador: `;` (ponto e vírgula)
+   - Colunas das bolas sorteadas (6 colunas com números de 1 a 60)
 
-
-Formato do CSV
-csvConcurso;Bola1;Bola2;Bola3;Bola4;Bola5;Bola6
+### Formato do CSV
+```csv
+Concurso;Bola1;Bola2;Bola3;Bola4;Bola5;Bola6
 1;4;5;30;33;41;52
 2;10;27;40;46;49;58
 ...
 ```
+
+---
 
 ## 📈 Output do Modelo
 
@@ -91,106 +114,93 @@ Scores individuais:
    05: 0.8234
    10: 0.7891
    ...
-5. Análise Detalhada da Previsão
+```
 
-Composição (pares/ímpares, primos, múltiplos)
-Distribuição por quadrantes, zonas e linhas
-Análise de atrasos (números atrasados presentes)
-Trincas e pares históricos na previsão
-Validação com padrões históricos
+### 5. Análise Detalhada da Previsão
+- Composição (pares/ímpares, primos, múltiplos)
+- Distribuição por quadrantes, zonas e linhas
+- Análise de atrasos (números atrasados presentes)
+- Trincas e pares históricos na previsão
+- Validação com padrões históricos
 
-6. Sugestões de Jogos
+### 6. Sugestões de Jogos
+- **Jogo Balanceado**: 3 pares + 3 ímpares
+- **Jogo com Atrasados**: Foca em números atrasados
+- **Jogo Pareto A**: Prioriza números classe A
 
-Jogo Balanceado: 3 pares + 3 ímpares
-Jogo com Atrasados: Foca em números atrasados
-Jogo Pareto A: Prioriza números classe A
+---
 
-🧠 Arquitetura do Modelo
-Features por Número (40+)
+## 🧠 Arquitetura do Modelo
 
-Frequências (4)
+### Features por Número (40+)
 
-Total, últimos 5, 10 e 20 concursos
+#### 1. Frequências (4)
+- Total, últimos 5, 10 e 20 concursos
 
+#### 2. Ciclos Avançados (9)
+- Gap atual, médio, desvio padrão
+- Regularidade do ciclo
+- Probabilidade baseada em ciclo
+- Tendência e aceleração
 
-Ciclos Avançados (9)
+#### 3. Momentum (3)
+- Janelas de 5, 10 e 20 concursos
 
-Gap atual, médio, desvio padrão
-Regularidade do ciclo
-Probabilidade baseada em ciclo
-Tendência e aceleração
+#### 4. Comportamento (3)
+- Volatilidade
+- Consistência
+- Tendência recente
 
+#### 5. Características Estáticas (7)
+- Par/ímpar, primo, Fibonacci
+- Quadrante, linha, coluna, zona
 
-Momentum (3)
+#### 6. Múltiplos (5)
+- Divisibilidade por 3, 5, 6, 7, 9
 
-Janelas de 5, 10 e 20 concursos
+#### 7. Correlações (2)
+- Média e máxima com outros números
 
+#### 8. Hot/Cold (1)
+- Score de aquecimento/esfriamento
 
-Comportamento (3)
+#### 9. Pareto (1)
+- Classificação A/B/C
 
-Volatilidade
-Consistência
-Tendência recente
+#### 10. Trincas e Pares (4)
+- Força das trincas e pares associados
 
+#### 11. Posicionamento (2)
+- Tendência de linha e coluna
 
-Características Estáticas (7)
-
-Par/ímpar, primo, Fibonacci
-Quadrante, linha, coluna, zona
-
-
-Múltiplos (5)
-
-Divisibilidade por 3, 5, 6, 7, 9
-
-
-Correlações (2)
-
-Média e máxima com outros números
-
-
-Hot/Cold (1)
-
-Score de aquecimento/esfriamento
-
-
-Pareto (1)
-
-Classificação A/B/C
-
-
-Trincas e Pares (4)
-
-Força das trincas e pares associados
-
-
-Posicionamento (2)
-
-Tendência de linha e coluna
-
-
-
-Ensemble de Modelos
-pythonRandom Forest: 600 árvores, depth=35
+### Ensemble de Modelos
+```python
+Random Forest: 600 árvores, depth=35
 Gradient Boosting: 250 estimadores, learning_rate=0.08
 Logistic Regression: C=0.15, max_iter=8000
-O modelo final combina as previsões com pesos:
+```
 
-ML Score: 50%
-Ciclo Score: 20%
-Trinca Strength: 15%
-Par Strength: 10%
-Pareto Bonus: 5%
+**O modelo final combina as previsões com pesos:**
+- ML Score: 50%
+- Ciclo Score: 20%
+- Trinca Strength: 15%
+- Par Strength: 10%
+- Pareto Bonus: 5%
 
-📊 Visualizações
+---
+
+## 📊 Visualizações
+
 O código gera análises visuais configuradas com:
+- **Estilo**: `seaborn-v0_8-darkgrid`
+- **Paleta**: `husl`
+- **Figuras**: 14x10 inches
 
-Estilo: seaborn-v0_8-darkgrid
-Paleta: husl
-Figuras: 14x10 inches
+---
 
-⚙️ Configurações Ajustáveis
-python# Tamanho do conjunto de teste
+## ⚙️ Configurações Ajustáveis
+```python
+# Tamanho do conjunto de teste
 test_size = 15
 
 # Janelas de análise
@@ -199,25 +209,47 @@ behavioral_window = 30
 
 # Normalização
 scaler = RobustScaler()  # Robusto a outliers
-🎲 Interpretação dos Resultados
-Scores
+```
 
-0.8 - 1.0: Muito provável
-0.6 - 0.8: Provável
-0.4 - 0.6: Médio
-< 0.4: Menos provável
+---
 
-Classificação Pareto
+## 🎲 Interpretação dos Resultados
 
-Classe A: 50% dos números que geram 40% das aparições
-Classe B: Restante dos números do Pareto 80%
-Classe C: Fora do Pareto (menos frequentes)
+### Scores
+| Faixa | Interpretação |
+|-------|---------------|
+| 0.8 - 1.0 | Muito provável |
+| 0.6 - 0.8 | Provável |
+| 0.4 - 0.6 | Médio |
+| < 0.4 | Menos provável |
 
-📝 Notas Importantes
+### Classificação Pareto
+- **Classe A**: 50% dos números que geram 40% das aparições
+- **Classe B**: Restante dos números do Pareto 80%
+- **Classe C**: Fora do Pareto (menos frequentes)
 
-O modelo utiliza histórico mínimo de 20 concursos para treinamento
-Todas as features são normalizadas com RobustScaler
-A previsão é baseada em padrões históricos e não garante acertos
-Recomenda-se atualizar o dataset regularmente
+---
 
-Desenvolvido com: Python 3.x | Scikit-learn | Pandas | NumPy
+## 📝 Notas Importantes
+
+- O modelo utiliza histórico mínimo de 20 concursos para treinamento
+- Todas as features são normalizadas com RobustScaler
+- A previsão é baseada em padrões históricos e não garante acertos
+- Recomenda-se atualizar o dataset regularmente
+
+---
+
+## 🤝 Contribuições
+
+Melhorias sugeridas:
+- [ ] Adicionar análise de redes neurais (LSTM)
+- [ ] Implementar validação cruzada temporal
+- [ ] Criar dashboard interativo
+- [ ] Adicionar análise de estações/meses
+- [ ] Implementar otimização bayesiana de hiperparâmetros
+
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
