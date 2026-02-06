@@ -63,10 +63,6 @@ scikit-learn
 scipy
 ```
 
-### Instalação
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn scipy
-```
 
 ### Execução no Google Colab
 
