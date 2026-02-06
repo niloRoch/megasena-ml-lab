@@ -2,7 +2,7 @@
 
 ## 🎯 Resumo
 
-O código monolítico foi destrinchado em **10 arquivos modulares** organizados em uma arquitetura limpa e escalável.
+O código monolítico (script.py) foi destrinchado em **10 arquivos modulares** organizados em uma arquitetura limpa e escalável.
 
 ---
 
